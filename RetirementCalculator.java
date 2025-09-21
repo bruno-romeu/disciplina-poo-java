@@ -102,7 +102,7 @@ public class RetirementCalculator {
 
 
     public static void ruleByPoints(int age, int contributionTime, int points, String selectedSex) {
-        // Regra de aposentadoria por pontos...
+        // Regra de aposentadoria por pontos aqui...
     }
 
 }
