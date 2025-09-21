@@ -1,5 +1,4 @@
 import javax.swing.JOptionPane;
-import java.time.Year;
 
 public class RetirementCalculator {
 
@@ -9,9 +8,6 @@ public class RetirementCalculator {
         String selectedSex;
         int contributionTime = 0;
         boolean isNumberValid = false;
-        int year = Year.now().getValue();
-
-        // variáveis para a segunda regra
         String [] options = {"Sim", "Não"};
         String selectedOption;
 
@@ -41,8 +37,6 @@ public class RetirementCalculator {
 
         int question2 = JOptionPane.showOptionDialog(null, "Para sabermos quais regras se aplicam a você, por favor, responda: \\n\\nVocê já contribuía para a Previdência (INSS) antes de 13 de novembro de 2019?", "Análise da regra", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
 
-
-
         selectedSex = sex[question1];
         selectedOption = options[question2];
         System.out.println("Iniciando calculo...");
@@ -51,7 +45,9 @@ public class RetirementCalculator {
         ruleByAge(age, contributionTime, selectedSex);
 
         if(selectedOption.contains("Sim")) {
+
             ruleByPoints(age, contributionTime, selectedSex);
+
         }
     }
 
@@ -89,11 +85,12 @@ public class RetirementCalculator {
 
 
     public static void ruleByPoints(int age, int contributionTime, String selectedSex) {
+
         if(selectedSex.equals("Masculino")) {
             int pointsToRetirement = 102;
             int contributionToRetirement = 35;
 
-            int points  = age + contributionTime;
+            int points = age + contributionTime;
 
             if(points >= pointsToRetirement) {
                 if(contributionTime >= contributionToRetirement) {
@@ -108,7 +105,7 @@ public class RetirementCalculator {
             int pointsToRetirement = 92;
             int contributionToRetirement = 30;
 
-            int points  = age + contributionTime;
+            int points = age + contributionTime;
 
             if(points >= pointsToRetirement) {
                 if(contributionTime >= contributionToRetirement) {
@@ -118,9 +115,10 @@ public class RetirementCalculator {
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Você não cumpre com todos os requisitos de Pontos para se aposentar!", "Tente novamente ano que vem...", JOptionPane.ERROR_MESSAGE);
-
             }
+
         }
+
     }
 
 }
