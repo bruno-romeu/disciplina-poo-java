@@ -35,7 +35,7 @@ public class RetirementCalculator {
 
         int question1 = JOptionPane.showOptionDialog(null, "Para realizar o cálculo da aposentadoria, o sistema do INSS utiliza regras diferentes com base no sexo registrado em sua certidão de nascimento. \nPor favor, selecione a opção que devemos usar como base para a simulação: ", "Configuração da Simulação", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, sex, null);
 
-        int question2 = JOptionPane.showOptionDialog(null, "Para sabermos quais regras se aplicam a você, por favor, responda: \\n\\nVocê já contribuía para a Previdência (INSS) antes de 13 de novembro de 2019?", "Análise da regra", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
+        int question2 = JOptionPane.showOptionDialog(null, "Para sabermos quais regras se aplicam a você, por favor, responda: \nVocê já contribuía para a Previdência (INSS) antes de 13 de novembro de 2019?", "Análise da regra", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
 
         selectedSex = sex[question1];
         selectedOption = options[question2];
