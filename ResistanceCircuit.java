@@ -3,7 +3,6 @@ import javax.swing.*;
 public class ResistanceCircuit {
 
     public static void main(String[] args) {
-        //Faça uma classe que receba o valor de quatro resistências ligadas em série. Calcule e exiba a resistência equivalente, a maior e a menor resistência.
 
         double resistance1 = 0, resistance2 = 0, resistance3 = 0, resistance4 = 0;
         boolean isNumberValid = false;
